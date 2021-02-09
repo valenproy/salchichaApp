@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>bienvinidos a la de sachichas de 3 rasas.</title>
+    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/jumbotrom.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="stylesheet" href="../css/galeria.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css"
+    />
+  </head>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <body>
+    <div id="includedMenu"></div>
+    <div class="container">
+      <form action="">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >El campo email es requerido.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="Nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+
+        <div class="form-group">
+          <label for="comentario">comentario</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Suscribirse a noticias</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Correo</button>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <p>by valentino giachero 2020</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#includedMenu").load("menu.html");
+    });
+  </script>
+</html>
