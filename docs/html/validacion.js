@@ -2,8 +2,8 @@
 var eleForm = document.getElementById('mensajeForm')
 eleForm.style.display='none'
 
-function callphp(){
-    
+function callphp(objForm){
+    console.log('recibiendo el ojeto form en la funcion callphp',objForm)
     let data = {nombre:'valen'}
 
     fetch('https://example.com/profile', { method: 'POST', 
@@ -20,14 +20,17 @@ function callphp(){
 
 
 function validacion ()  {
-eleForm.style.display='none'
+  var objForm = {email:'',nombre:'',comentarios:''}
+  
+    eleForm.style.display='none'
 
     if(document.form.email.value===''){
     document.form.email.focus()
     eleForm.style.display='inline'
     eleForm.innerHTML='el campo email es requerido'
     return false
-    } else {
+    } else  {
+    objForm.email=document.form.email.value    
     console.log(document.form.email.value)
     }
 
@@ -38,6 +41,7 @@ if(document.form.nombre.value===''){
     eleForm.innerHTML='el campo nombre es requerido'
     return false
 } else {
+objForm.nombre=document.form.nombre.value  
     console.log(document.form.nombre.value)
 
 }
@@ -50,11 +54,13 @@ eleForm.style.display='inline'
 eleForm.innerHTML='el campo comentario es requerido'
 return false
 } else {
+    objForm.comentarios=document.form.comentarios.value 
     console.log(document.form.comentarios.value)
 
 }
 
-
-return callphp()
+console.log('este es el ojeto formulario',objForm)
+return callphp(objForm)
 
 }
+
